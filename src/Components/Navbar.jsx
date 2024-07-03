@@ -23,6 +23,7 @@ const Navbar = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
    getNews(text)
+   setText('')
   }
   return (
     <>
@@ -46,6 +47,11 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a onClick={()=>getNews("bollywood")} className={mode ? "nav-link text-light" :"nav-link"}  href="#">Bollywood</a>
+
+          </li>
+
+          <li className="nav-item">
+            <a onClick={()=>getNews("economics")} className={mode ? "nav-link text-light" :"nav-link"}  href="#">Economics</a>
 
           </li>
 

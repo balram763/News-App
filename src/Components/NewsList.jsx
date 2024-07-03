@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import ThemeContext from '../Providers/Theme/ThemeContext'
+import defaultImage from '../assets/image.png'
 
 const NewsList = ({news}) => {
   const {mode} = useContext(ThemeContext)
@@ -12,7 +13,7 @@ const NewsList = ({news}) => {
 
       <div className={mode ? "card w-100 p-3 m-1 d-flex bg-dark text-light flex-row" : "card w-100 p-3 m-1 d-flex flex-row"}>
         <div className='bg-primary w-50 d-flex justify-content-center align-item-center'>
-        <img src={news.urlToImage} alt="img" style={{height:'100%',width:'100%', objectFit:'cover'}} />
+        <img src={news.urlToImage ? news.urlToImage : defaultImage} alt="img" style={{height:'100%',width:'100%', objectFit:'cover'}} />
         </div>
         <div className='p-5'>
             <h3>{news.title}</h3>
