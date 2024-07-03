@@ -10,6 +10,8 @@ const WeatherCard = () => {
     },
     current : {
       temp_c : 20,
+      wind_kph : 20,
+      humidity : 50,
       condition : {
         text : 'hot',
         icon : '//cdn.weatherapi.com/weather/64x64/day/143.png'
